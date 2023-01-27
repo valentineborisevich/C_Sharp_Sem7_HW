@@ -7,9 +7,9 @@
 // 8 7,8 -7,1 9
 
 // //matrix[i, j] = Math.Round(new Random().NextDouble() + new Random().Next(0, 9), 1);
-void FillArrayWRandomDouble(double[,] matrix, int lineslength, int columnslength)
+void FillArrayWRandomDouble(double[,] matrix, int rowslength, int columnslength)
 {
-    for (int i = 0; i < lineslength; i++)
+    for (int i = 0; i < rowslength; i++)
     {
         for (int j = 0; j < columnslength; j++)
         {
@@ -20,11 +20,11 @@ void FillArrayWRandomDouble(double[,] matrix, int lineslength, int columnslength
     }
 }
 
-Console.WriteLine("Enter matrix's length - lines");
-int l = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter matrix's length - rows");
+int r = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter matrix's length - columns");
 int c = Convert.ToInt32(Console.ReadLine());
-double[,] matrix = new double[l, c];
+double[,] matrix = new double[r, c];
 
 Console.WriteLine("Your matrix is: ");
-FillArrayWRandomDouble(matrix, l, c);
+FillArrayWRandomDouble(matrix, r, c);
